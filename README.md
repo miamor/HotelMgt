@@ -11,5 +11,6 @@ Reserve (chưa tích hợp CSDL, mới có form)
 - Hà: Room
 - Thảo: Check in
 - Phương: Check out
-2. Kết nối CSDL ở form:
-- Nhung: Reserve
+- Nhung: Discount
+2. Kết nối CSDL ở form: 
+- ~~Nhung: Reserve (Tú đã làm)~~
