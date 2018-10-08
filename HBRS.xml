@@ -4,7 +4,12 @@
         <name>HBRS</name>
     </assembly>
     <members>
-        <member name="P:HBRS.frmRoom.Default">
+        <member name="P:HBRS.frmCheckin.Default">
+            <summary>
+            Added by the VB.Net to C# Converter to support default instance behavour in C#
+            </summary>
+        </member>
+        <member name="P:HBRS.frmSelectGuest.Default">
             <summary>
             Added by the VB.Net to C# Converter to support default instance behavour in C#
             </summary>
