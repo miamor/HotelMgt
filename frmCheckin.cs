@@ -58,9 +58,41 @@ namespace HBRS
         {
 
         }
+
+        private void clear_text()
+        {
+            txtGuestName.Clear();
+            txtRoomNumber.Clear();
+            txtRoomType.Clear();
+            txtRoomRate.Clear();
+            txtChildren.Text = "0";
+            txtAdults.Text = "0";
+            cboDiscount.Refresh();
+            txtAdvance.Clear();
+            txtSubTotal.Clear();
+            txtTotal.Clear();
+            lblDiscountID.Text = "";
+            lblDiscountRate.Text = "";
+            lblGuestID.Text = "";
+            lblAdvancePayment.Text = "";
+            lblNoOfOccupancy.Text = "0";
+
+            DateTime time = DateTime.Now;
+            string format = "MM/d/yyyy";
+            txtCheckInDate.Text = time.ToString(format);
+            dtCheckOutDate.Text = System.Convert.ToString(DateTime.Now.AddDays(1));
+        }
+
         public void frmCheckin_Load(System.Object sender, System.EventArgs e)
         {
-
+            clear_text();
+            DateTime time = DateTime.Now;
+            string format = "MM/d/yyyy";
+            txtCheckInDate.Text = time.ToString(format);
+            dtCheckOutDate.Text = System.Convert.ToString(DateTime.Now.AddDays(1));
+            transID();
+            pop_discount();
+            display_checkin();
         }
 
         public void transID()
@@ -75,7 +107,7 @@ namespace HBRS
 
         public void bttnCancel_Click(System.Object sender, System.EventArgs e)
         {
-
+            clear_text();
         }
 
         public void dtCheckOutDate_ValueChanged_1(System.Object sender, System.EventArgs e)
@@ -85,12 +117,14 @@ namespace HBRS
 
         public void bttnSearchGuest_Click(System.Object sender, System.EventArgs e)
         {
-            // cần ds khách để chọn
+            // ds khách để chọn
+            frmSelectGuest.Default.ShowDialog();
         }
 
         public void bttnSearchRoom_Click(System.Object sender, System.EventArgs e)
         {
-            // cần ds phòng để chọn
+            // ds phòng để chọn
+            frmSelectRoom.Default.ShowDialog();
         }
 
         public void txtRoomRate_TextChanged(System.Object sender, System.EventArgs e)
@@ -120,7 +154,19 @@ namespace HBRS
 
         private void pop_discount()
         {
+            Module1.con.Open();
+            DataTable dt = new DataTable();
+            Module1.rs = new OleDbDataAdapter("SELECT * FROM tblDiscount", Module1.con);
+            Module1.rs.Fill(dt);
 
+            cboDiscount.Items.Clear();
+            int i = default(int);
+            for (i = 0; i <= dt.Rows.Count - 1; i++)
+            {
+                cboDiscount.Items.Add(dt.Rows[i]["DiscountType"]);
+            }
+            Module1.rs.Dispose();
+            Module1.con.Close();
         }
 
         public void cboDiscount_TextChanged(object sender, System.EventArgs e)

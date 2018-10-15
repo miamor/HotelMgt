@@ -68,8 +68,9 @@ namespace HBRS
 		
 		public void toolbarCheckIn_Click(System.Object sender, System.EventArgs e)
 		{
-			// open Checkin dialog
-		}
+            // open Checkin dialog
+            frmCheckin.Default.ShowDialog();
+        }
 		
 		public void ToolStripButton13_Click(System.Object sender, System.EventArgs e)
 		{
@@ -98,7 +99,7 @@ namespace HBRS
 		
 		public void toolbarRoom_Click(System.Object sender, System.EventArgs e)
 		{
-			frmRoom.Default.ShowDialog();
+			
 		}
 		
 		public void toolbarReserve_Click(System.Object sender, System.EventArgs e)
@@ -182,8 +183,7 @@ namespace HBRS
 
         public void RoomToolStripMenuItem_Click(System.Object sender, System.EventArgs e)
 		{
-			frmRoom.Default.ShowDialog();
-			frmRoom.Default.TabPage2.Select();
+			
 		}
 		
 		public void GuestToolStripMenuItem_Click(System.Object sender, System.EventArgs e)
