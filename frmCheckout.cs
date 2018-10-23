@@ -51,22 +51,47 @@ namespace HBRS
 
         public void bttnSearchGuest_Click(System.Object sender, System.EventArgs e)
         {
-            // cần ds checkin list để chọn
+            frmCheckinList.Default.ShowDialog();
         }
 
         public void txtRoomNumber_TextChanged(System.Object sender, System.EventArgs e)
         {
-            
+            if (txtRoomNumber.Text == null)
+            {
+            }
+            else
+            {
+                Module1.con.Open();
+                DataTable dt = new DataTable("tblRoom");
+                Module1.rs = new OleDbDataAdapter("SELECT * FROM tblRoom WHERE RoomNumber = " + txtRoomNumber.Text + "", Module1.con);
+                Module1.rs.Fill(dt);
+                txtRoomType.Text = (string)(dt.Rows[0]["RoomType"]).ToString();
+                txtRoomRate.Text = (Conversion.Val(dt.Rows[0]["RoomRate"]).ToString("N"));
+                Module1.rs.Dispose();
+                Module1.con.Close();
+            }
+
         }
 
         public void txtCash_KeyPress(object sender, System.Windows.Forms.KeyPressEventArgs e)
         {
-            
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != ControlChars.Back && e.KeyChar != '.')
+            {
+                //cancel keys
+                e.Handled = true;
+            }
         }
 
         public void txtCash_TextChanged(System.Object sender, System.EventArgs e)
         {
-            
+            if (Conversion.Val(txtCash.Text) < Conversion.Val(txtTotal.Text))
+            {
+                txtChange.Text = "0.00";
+            }
+            else
+            {
+                txtChange.Text = System.Convert.ToString((Conversion.Val(txtCash.Text) - Conversion.Val(txtTotal.Text)).ToString("N"));
+            }
         }
 
         public void bttnCheckout_Click(System.Object sender, System.EventArgs e)
