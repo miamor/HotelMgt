@@ -51,6 +51,7 @@ namespace HBRS
             this.ToolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.toolbarRoom = new System.Windows.Forms.ToolStripButton();
             this.ToolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.ToolStripButton10 = new System.Windows.Forms.ToolStripButton();
             this.ToolStripSeparator9 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripButton12 = new System.Windows.Forms.ToolStripButton();
@@ -88,6 +89,7 @@ namespace HBRS
             this.RoomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.GuestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Timer1 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStrip1.SuspendLayout();
             this.status.SuspendLayout();
             this.MenuStrip1.SuspendLayout();
@@ -105,6 +107,8 @@ namespace HBRS
             this.ToolStripSeparator7,
             this.toolbarRoom,
             this.ToolStripSeparator8,
+            this.toolStripButton1,
+            this.toolStripSeparator11,
             this.ToolStripButton10,
             this.ToolStripSeparator9,
             this.ToolStripButton12,
@@ -176,14 +180,24 @@ namespace HBRS
             this.ToolStripSeparator8.Name = "ToolStripSeparator8";
             this.ToolStripSeparator8.Size = new System.Drawing.Size(6, 39);
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(73, 36);
+            this.toolStripButton1.Text = "Guest";
+            this.toolStripButton1.ToolTipText = "Guest";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+            // 
             // ToolStripButton10
             // 
             this.ToolStripButton10.Image = ((System.Drawing.Image)(resources.GetObject("ToolStripButton10.Image")));
             this.ToolStripButton10.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ToolStripButton10.Name = "ToolStripButton10";
-            this.ToolStripButton10.Size = new System.Drawing.Size(73, 36);
-            this.ToolStripButton10.Text = "Guest";
-            this.ToolStripButton10.ToolTipText = "Guest";
+            this.ToolStripButton10.Size = new System.Drawing.Size(90, 36);
+            this.ToolStripButton10.Text = "Discount";
+            this.ToolStripButton10.ToolTipText = "Discount";
             this.ToolStripButton10.Click += new System.EventHandler(this.ToolStripButton10_Click);
             // 
             // ToolStripSeparator9
@@ -457,6 +471,11 @@ namespace HBRS
             this.Timer1.Interval = 1000;
             this.Timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 39);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -532,7 +551,8 @@ namespace HBRS
 		internal System.Windows.Forms.ToolStripMenuItem RoomToolStripMenuItem;
 		internal System.Windows.Forms.ToolStripMenuItem GuestToolStripMenuItem;
         private System.ComponentModel.IContainer components;
-		
-	}
+        internal ToolStripButton toolStripButton1;
+        internal ToolStripSeparator toolStripSeparator11;
+    }
 	
 }

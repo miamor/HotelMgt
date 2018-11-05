@@ -63,8 +63,18 @@
     <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="frmCheckinList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckinList.Designer.cs">
+      <DependentUpon>frmCheckinList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckinListMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckinListMonitor.Designer.cs">
+      <DependentUpon>frmCheckinListMonitor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCheckout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +86,12 @@
     </Compile>
     <Compile Include="frmCheckin.Designer.cs">
       <DependentUpon>frmCheckin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckoutList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckoutList.Designer.cs">
+      <DependentUpon>frmCheckoutList.cs</DependentUpon>
     </Compile>
     <Compile Include="frmDiscount.cs">
       <SubType>Form</SubType>
@@ -108,11 +124,35 @@
     <Compile Include="frmReserve.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReserveListMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReserveListMonitor.Designer.cs">
+      <DependentUpon>frmReserveListMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoom.Designer.cs">
+      <DependentUpon>frmRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoomListMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoomListMonitor.Designer.cs">
+      <DependentUpon>frmRoomListMonitor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSelectGuest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSelectGuest.Designer.cs">
       <DependentUpon>frmSelectGuest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectRoom.Designer.cs">
+      <DependentUpon>frmSelectRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="module.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,8 +175,17 @@
     <EmbeddedResource Include="frmCheckin.resx">
       <DependentUpon>frmCheckin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckinList.resx">
+      <DependentUpon>frmCheckinList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckinListMonitor.resx">
+      <DependentUpon>frmCheckinListMonitor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCheckout.resx">
       <DependentUpon>frmCheckout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckOutList.resx">
+      <DependentUpon>frmCheckoutList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDiscount.resx">
       <DependentUpon>frmDiscount.cs</DependentUpon>
@@ -153,8 +202,20 @@
     <EmbeddedResource Include="frmReserve.resx">
       <DependentUpon>frmReserve.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmReserveListMonitor.resx">
+      <DependentUpon>frmReserveListMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoom.resx">
+      <DependentUpon>frmRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoomListMonitor.resx">
+      <DependentUpon>frmRoomListMonitor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSelectGuest.resx">
       <DependentUpon>frmSelectGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectRoom.resx">
+      <DependentUpon>frmSelectRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -174,6 +235,12 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolStripButton14.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1486395291-08-sales_80583.png" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
